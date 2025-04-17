@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif; /* Шрифт түрі */
+    background: #ff0000; /* Градиентті фон */
+    color: white; /* Ақ түсті мәтін */
+    text-align: center; /* Мәтінді ортаға қою */
+    padding: 100px 0; /* Жоғары және төменнен 100 пиксель кеңістік */
+    margin: 0; /* Марджинді алып тастау */
+}
+
+h1 {
+    font-size: 50px; /* Бас тақырыптың өлшемі */
+    margin-bottom: 30px; /* Тақырыптың астынан кеңістік */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Көлеңке */
+    color: black;
+}
+
+.countdown {
+    font-size: 60px; /* Таймердің өлшемі */
+    font-weight: bold; /* Қалың жазу */
+    color: #ff4747; /* Қызыл түс */
+    margin-top: 20px; /* Жоғарыдан 20px кеңістік */
+    opacity: 0; /* Бастапқыда көрінбейді */
+    animation: fadeIn 3s forwards; /* FadeIn анимациясы 3 секундта */
+}
+
+.btn-start {
+    background-color: #ff4747; /* Қызыл түсті батырма */
+    color: white; /* Ақ түсті мәтін */
+    font-size: 20px; /* Батырманың мәтінінің өлшемі */
+    padding: 20px 50px; /* Батырманың ішкі кеңістігі */
+    border: none; /* Шекараны алып тастау */
+    border-radius: 10px; /* Жұмсақ бұрыштар */
+    cursor: pointer; /* Батырманы басқанда қолды көрсету */
+    transition: all 0.3s ease; /* Анимациямен өзгеру */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Көлеңке қосу */
+}
+
+.btn-start:hover {
+    background-color: #ff2a2a; /* Батырма үстіне келгенде түс өзгеруі */
+    transform: scale(1.1); /* Батырманың көлемін ұлғайту */
+}
+
+.btn-option {
+    background-color: rgb(0, 0, 0); /* Жасыл түсті батырмалар */
+    color: white; /* Ақ түсті мәтін */
+    font-size: 20px; /* Мәтіннің өлшемі */
+    padding: 10px 20px; /* Ішкі кеңістік */
+    margin: 10px; /* Шеттерінен кеңістік */
+    border: none; /* Шекараны алып тастау */
+    border-radius: 10px; /* Жұмсақ бұрыштар */
+    cursor: pointer; /* Батырманы басқанда қолды көрсету */
+    transition: all 0.3s ease; /* Анимациямен өзгеру */
+}
+
+.btn-option:hover {
+    background-color: #ff7300; /* Батырма үстіне келгенде түс өзгеруі */
+    transform: scale(1.05); /* Батырманың көлемін ұлғайту */
+}
+
+.exercises {
+    display: none; /* Әдепкіде жаттығуларды жасыру */
+    margin-top: 55px; /* Жоғарыдан 30px кеңістік */
+    text-align: left; /* Жаттығулардың мәтінін солға қою */
+    height: 100px;
+}
+
+.exercise-item {
+    background-color: #000000; /* Ақ түс */
+    color: rgb(255, 255, 255); /* Қара түсті мәтін */
+    padding: 15px; /* Ішкі кеңістік */
+    margin: 10px; /* Шеттерінен кеңістік */
+    border-radius: 8px; /* Жұмсақ бұрыштар */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Жұмсақ көлеңке */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+svg{
+    position: absolute;
+    top: -40px;
+    left: -40px; 
+}

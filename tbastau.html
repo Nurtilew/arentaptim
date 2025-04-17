@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="tbstau.css">
+</head>
+<body>
+    <a href="index.html"><svg fill="#ffffff" width="200px" height="200px" viewBox="-32 -32 96.00 96.00" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"><path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path></g></svg></a>
+         <!-- Басты тақырып: Пайдаланушыға жаттығуды бастау үшін бөлікті таңдау туралы хабарлама -->
+    <h1>Жаттығуды бастау үшін бөлікті таңдаңыз</h1>
+    <div>
+        <!-- Үш жаттығу бөлігін таңдауға арналған батырмалар -->
+        <button class="btn-option" onclick="chooseExercise('chest')">Кеуде</button>
+        <button class="btn-option" onclick="chooseExercise('legs')">Аяқ</button>
+        <button class="btn-option" onclick="chooseExercise('arms')">Қол</button>
+        <button class="btn-option" onclick="chooseExercise('stomach')">Іш</button>
+        <button class="btn-option" onclick="chooseExercise('back')">Арқа</button>
+    </div>
+
+    <!-- Таймерді көрсететін бөлім -->
+    <div id="countdown" class="countdown"></div>
+
+    <!-- Жаттығу тізімін көрсететін бөлім -->
+    <div id="exercises" class="exercises">
+        <!-- Жаттығу тізімі осы жерде динамикалық түрде көрсетіледі -->
+    </div>
+
+    <script>
+        // Жаттығу бөлігін таңдаған кезде шақырылатын функция
+        function chooseExercise(part) {
+            let exercises = document.getElementById('exercises');
+            exercises.style.display = 'block'; // Жаттығуларды көрсету
+
+            let exerciseList = '';
+            
+            // Әр жаттығу бөлігінің жаттығуларын динамикалық түрде көрсету
+            if (part === 'chest') {
+                exerciseList = `
+                    <div class="exercise-item">Всех до отказа</div>
+                    <div class="exercise-item">1. Жим лежа</div>
+                    <div class="exercise-item">2. Отжимание простой</div>
+                    <div class="exercise-item">3. Отжимание широкой</div>
+                    <div class="exercise-item">4. Берпи</div>
+                    <div class="exercise-item">5. Отжимание по-индийски</div>
+                    <div class="exercise-item">6. Отжимание с упором по диагонали</div>
+                    <div class="exercise-item">7. Отжимание с поворотом</div>
+                    <div class="exercise-item">8. Отжимание алмазные</div>
+                    <div class="exercise-item">9. Отжимание в позе Спайдрмена</div>
+                    <div class="exercise-item">10. Отжимание с упором сзади</div>
+                `;
+            } else if (part === 'legs') {
+                exerciseList = `
+                    <div class="exercise-item">Всех до отказа</div>
+                    <div class="exercise-item">1. Присидание</div>
+                    <div class="exercise-item">2. Бег</div>
+                    <div class="exercise-item">3. Прыжка</div>
+                    <div class="exercise-item">4. Прыжки на корточках</div>
+                    <div class="exercise-item">5. Присидания выпады</div>
+                    <div class="exercise-item">6. Вращение ногами от бедра</div>
+                    <div class="exercise-item">7. Выпады назад</div>
+                    <div class="exercise-item">8. Махи левой/правой ногой лежа на боку</div>
+                `;
+            } else if (part === 'arms') {
+                exerciseList = `
+                    <div class="exercise-item">Всех до отказа</div>
+                    <div class="exercise-item">1. Отжимание сидия на стол</div>
+                    <div class="exercise-item">2. Сгибание гантелей на бицепс</div>
+                    <div class="exercise-item">3. Жмать эспандер</div>
+                    <div class="exercise-item">4. Махи с гантельями</div>
+                    <div class="exercise-item">5. Подтягиваться на турнике</div>
+                    <div class="exercise-item">6. Отжимание на брусиях</div>
+                    <div class="exercise-item">7. Подягивание обратным иуузким хватом</div>
+                    <div class="exercise-item">8. Сгибание кистей с гантельом верх/вниз</div>
+                    <div class="exercise-item">9. Отжимание узким хватом</div>
+                    <div class="exercise-item">10. Французский жим</div>
+                    
+                `;
+
+            } else if (part === 'stomach') {
+                exerciseList = `
+                    <div class="exercise-item">Всех до отказа</div>
+                    <div class="exercise-item">1. Скручивания</div>
+                    <div class="exercise-item">2. Обратный скручивания</div>
+                    <div class="exercise-item">3. Подъем ног в висе</div>
+                    <div class="exercise-item">4. Подъем ног лежа</div>
+                    <div class="exercise-item">5. Складка</div>
+                    <div class="exercise-item">6. Планка</div>
+                    <div class="exercise-item">7. Боковые скручивания</div>
+                    <div class="exercise-item">8. Русские скручивания</div>
+                    <div class="exercise-item">9. Бокавая планка</div>
+                    <div class="exercise-item">10. Наклоны с гантелей в сторону</div>
+                    
+                `;
+
+            } else if (part === 'back') {
+                exerciseList = `
+                    <div class="exercise-item">Всех до отказа</div>
+                    <div class="exercise-item">1. Подтягивание с широким хватом</div>
+                    <div class="exercise-item">2. Подтягивание с узким хватом</div>
+                    <div class="exercise-item">3. Тяга верховнего блока к груди</div>
+                    <div class="exercise-item">4. Тяга верховнего  блока за голаву</div>
+                    <div class="exercise-item">5. Тяга гантели в наклоне</div>
+                    <div class="exercise-item">6. Тяга Т-грифа</div>
+                    <div class="exercise-item">7. Гиперэкстензия</div>
+                    <div class="exercise-item">8. Румынская тяга</div>
+                    <div class="exercise-item">9. Становая тяга</div>
+                    
+                `;
+            }
+
+            // Жаттығулар тізімін көрсету
+            exercises.innerHTML = exerciseList;
+            }
+    </script>  
+</body>
+</html>

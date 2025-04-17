@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жаттығу және Тамақтану</title>
+    <link rel="stylesheet" href="tamak.css">
+</head>
+<body>
+    <a href="index.html"><svg fill="#ffffff" width="200px" height="200px" viewBox="-32 -32 96.00 96.00" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"><path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path></g></svg></a>
+    <div class="container">
+        <h1>Тамақтану</h1>
+
+        <div class="section">
+            <div class="diet" onclick="showDiet(1)">Салмақ қосу</div>
+            <div class="diet" onclick="showDiet(2)">Салмақ түсіру</div>
+            <div class="diet" onclick="showDiet(3)">Дене сымбатын сақтау</div>
+        </div>
+
+        <div id="details" class="hidden">
+            <h2 id="program-title"></h2>
+            <p id="program-description"></p>
+            <button onclick="hideDetails()">Артқа</button>
+        </div>
+    </div>
+
+    <script>
+        const programs = {
+        };
+
+        const diets = {
+            1: { title: "Салмақ қосу", description: "Күнделікті рационға көп ақуыздар мен көмірсулар енгізу қажет." },
+            2: { title: "Салмақ түсіру", description: "Аз калориялы диета мен кардио жаттығуларын біріктіру қажет тек диета емес көп жаяу жүру немесе қатты әрі көп терлеу керек." },
+            3: { title: "Дене сымбатын сақтау", description: "Теңгерімді тамақтану мен тұрақты жаттығулар қажет." }
+        };
+
+        function showDetails(id) {
+            document.getElementById("program-title").innerText = programs[id].title;
+            document.getElementById("program-description").innerText = programs[id].description;
+            document.getElementById("details").classList.remove("hidden");
+        }
+
+        function showDiet(id) {
+            document.getElementById("program-title").innerText = diets[id].title;
+            document.getElementById("program-description").innerText = diets[id].description;
+            document.getElementById("details").classList.remove("hidden");
+        }
+
+        function hideDetails() {
+            document.getElementById("details").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgb(255, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 100px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.program, .diet {
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.program:hover, .diet:hover {
+    background: #b90000;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+}
+
+svg{
+    position: absolute;
+    top: -40px;
+    left: -40px; 
+}

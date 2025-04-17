@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мотивациялық цитаталар</title>
+    <link rel="stylesheet" href="moti.css">
+</head>
+<body>
+        <a href="index.html"><svg fill="#ffffff" width="200px" height="200px" viewBox="-32 -32 96.00 96.00" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"><path d="M27 18.039L16 9.501 5 18.039V14.56l11-8.54 11 8.538v3.481zm-2.75-.31v8.251h-5.5v-5.5h-5.5v5.5h-5.5v-8.25L16 11.543l8.25 6.186z"></path></g></svg></a>
+    <div class="container">
+        <h1>Атақты спортшылардың мотивациялық сөздері</h1>
+        <div id="quotes" class="quotes-container"></div>
+    </div>
+
+    <script>
+        const quotes = [
+            { text: "Жеңіс - бұл әр күн сайын қайталанатын кішкентай жеңістер.", author: "Майкл Джордан" },
+            { text: "Сәтсіздік – бұл тек сабақ. Ол сізді жақсартады.", author: "Арнольд Шварценеггер" },
+            { text: "Сіз өзіңіздің шектеулеріңізді тек өзіңіз қоясыз.", author: "Юсейн Болт" },
+            { text: "Тек өзіңе сен. Басқалардың пікірі маңызды емес.", author: "Конор МакГрегор" },
+            { text: "Қиындықтар – тек жаңа мүмкіндіктер.", author: "Кристиано Роналду" },
+            { text: "Сіз не істегеніңізді есептемеңіз. Алғашқы қадамды жасаңыз, ал соңында бұл бәрі үшін маңызды болар.", author: "Том Брэйди" },
+            { text: "Егер жеңіске жетсең, әрқашан өзіңе сенімді бол. Егер ұтылсаң, ешқашан жеңілме.", author: "Сергей Бубка" },
+            { text: "Қиындықтарды жеңу – бұл басты мақсат емес. Маңыздысы – олардан не үйрену.", author: "Шакира" },
+            { text: "Әрбір сәтте бәрін қайта бастауға болады. Өткендегі сәтсіздіктер жай ғана сабақ.", author: "Леброн Джеймс" },
+            { text: "Шабыт табу қиын, бірақ оны табу үшін жұмыс істей беру керек.", author: "Мохаммед Әли" },
+            { text: "Бірінші қадамды жаса, сосын басқа қадамдар өзінен-өзі келеді.", author: "Уилл Смит" },
+            { text: "Өзіңді басқалардың алдында көрсетудің ең жақсы әдісі – өзіңе сену.", author: "Джеймс Хардэн" },
+            { text: "Жеңіс тек спортта ғана емес, өмірде де маңызды.", author: "Винс Ломбарди" },
+            { text: "Барлығының алдында сен жеңесің, егер өзіңе сенімді болсаң.", author: "Неймар" },
+        ];
+
+        const quotesContainer = document.getElementById("quotes");
+
+        quotes.forEach(quote => {
+            const quoteCard = document.createElement("div");
+            quoteCard.classList.add("quote-card");
+            quoteCard.innerHTML = `<p>"${quote.text}"</p><p><strong>- ${quote.author}</strong></p>`;
+            quotesContainer.appendChild(quoteCard);
+        });
+    </script>
+</body>
+</html>
